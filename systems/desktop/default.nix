@@ -23,7 +23,7 @@
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable = true;
 
-  #security.polkit.enable = true;
+  security.polkit.enable = true;
 
   programs = {
     firefox.enable = true;
@@ -62,17 +62,17 @@
 
     xserver = {
       # Enable the X11 windowing system.
-      enable = true;
+      #enable = true;
 
       # Enable the GNOME Desktop Environment.
-      displayManager.gdm.enable = true;
-      desktopManager.gnome.enable = true;
+      #displayManager.gdm.enable = true;
+      #desktopManager.gnome.enable = true;
 
       # Configure keymap in X11
-      xkb = {
-        layout = "de";
-        variant = "";
-      };
+      #xkb = {
+      #  layout = "de";
+      #  variant = "";
+      #};
 
       #NVIDIA SETTINGS
       # Load nvidia driver for Xorg and Wayland
