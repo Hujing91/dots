@@ -3,7 +3,7 @@
   imports = [
     #./alacritty
     ./foot
-    #./rofi
+    ./rofi
     ./zellij
   ];
 }
