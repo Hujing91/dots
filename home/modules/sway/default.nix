@@ -48,21 +48,21 @@ in
     in
     mkIf cnfg.enable {
       home = {
-        #components = {
-        #  alacritty = {
-        #    enable = true;
-        #    enableAsSwayDefaultTerminal = true;
-        #  };
+        components = {
+          alacritty = {
+            enable = true;
+            enableAsSwayDefaultTerminal = true;
+          };
 
-        #  rofi.enable = true;
-        #};
+          rofi.enable = true;
+        };
 
         file = {
           ".config/sway/config".source = builtins.toFile "sway-config" ''
             ${cnfg.prependedConfig}
 
             # programs
-            #set $terminal ${cnfg.defaultTerminal} #
+            set $terminal ${cnfg.defaultTerminal} #
             #set $explorer ${tuiLaunch "yeet"}
 
             # sway config

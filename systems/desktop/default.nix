@@ -2,8 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, user, ... }:
-
+{ pkgs, ... }:
 {
   imports = [ 
     ../shared/base.nix
@@ -25,19 +24,19 @@
   networking.networkmanager.enable = true;
 
   # Enable the X11 windowing system.
-  services.xserver.enable = true;
+  #services.xserver.enable = true;
 
   # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
+  #services.xserver.displayManager.gdm.enable = true;
+  #services.xserver.desktopManager.gnome.enable = true;
 
   # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "de";
-    variant = "";
-  };
+  #services.xserver.xkb = {
+  #  layout = "de";
+  #  variant = "";
+  #};
 
-  #security.polkit.enable = true;
+  security.polkit.enable = true;
 
   #modules = {
   #  #gtk.enable = true;
