@@ -18,11 +18,11 @@
     #  swww.enable = true;
     #};
 
-    modules = {
+    #modules = {
     #  gtk.enable = true;
-      sway.enable = true;
+    #  sway.enable = true;
     #  xdg.enable = true;
-    };
+    #};
 
     packages = with pkgs; [
       discord
