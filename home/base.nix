@@ -22,8 +22,8 @@
         htop
         
         # Video/Audio
-        #feh		# Image Viewer
-        #mpv		# Media Player
+        #feh		      # Image Viewer
+        #mpv		      # Media Player
         #obs-studio		# Broadcasting
         #pavucontrol	# Audio control
         #plex-media-player	# Media Player
