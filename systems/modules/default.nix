@@ -2,7 +2,7 @@
 {
   imports = [
     #./gtk
-    ./tuigreet
+    #./tuigreet
     #./xdg
   ];
 }

@@ -100,10 +100,10 @@ in
   services.gnome.gnome-keyring.enable = true;
 
   # enable sway window manager
-  programs.sway = {
-    enable = true;
-    wrapperFeatures.gtk = true;
-  };
+  #programs.sway = {
+  #  enable = true;
+  #  wrapperFeatures.gtk = true;
+  #};
 
   #security.polkit.enable = true;
 
