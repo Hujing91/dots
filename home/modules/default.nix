@@ -1,7 +1,8 @@
 { home-manager, ... }:
 {
   imports = [
-    ./sway
     ./console
+    ./screenshot
+    ./sway
   ];
 }
