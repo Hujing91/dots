@@ -19,7 +19,7 @@
     timeout = 2;
   };
   
-  networking.hostName = "nixos";
+  networking.hostName = "nixos-desktop";
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable = true;
 
@@ -35,6 +35,18 @@
     layout = "de";
     variant = "";
   };
+
+  #security.polkit.enable = true;
+
+  #modules = {
+  #  #gtk.enable = true;
+  #  tuigreet = {
+  #    enable = true;
+  #    command = "sway";
+  #    # command = "Hyprland";
+  #  };
+  #  #xdg.enable = true;
+  #};
 
   # Configure console keymap
   console.keyMap = "de";
@@ -74,18 +86,6 @@
   # Enable the gnome-keyring secrets vault. 
   # Will be exposed through DBus to programs willing to store secrets.
   services.gnome.gnome-keyring.enable = true;
-
-  #security.polkit.enable = true;
-
-  #modules = {
-  #  #gtk.enable = true;
-  #  tuigreet = {
-  #    enable = true;
-  #    command = "sway";
-  #    # command = "Hyprland";
-  #  };
-  #  #xdg.enable = true;
-  #};
 
   #NVIDIA SETTINGS
   # Load nvidia driver for Xorg and Wayland
