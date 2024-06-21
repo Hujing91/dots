@@ -36,12 +36,6 @@ in
     LC_TIME = "de_DE.UTF-8";
   };
 
-  # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "de";
-    variant = "";
-  };
-
   # Configure console keymap
   console.keyMap = "de";
 
@@ -64,9 +58,6 @@ in
     #media-session.enable = true;
   };
 
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
-
   # Install firefox.
   programs.firefox.enable = true;
 
@@ -88,37 +79,6 @@ in
     mako # notification system developed by swaywm maintainer
   ];
 
-  # Enable the gnome-keyring secrets vault. 
-  # Will be exposed through DBus to programs willing to store secrets.
-  services.gnome.gnome-keyring.enable = true;
-
-  # enable sway window manager
-  #programs.sway = {
-  #  enable = true;
-  #  wrapperFeatures.gtk = true;
-  #};
-
-  #security.polkit.enable = true;
-
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
-
-  # List services that you want to enable:
-
-  # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
-
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
-  
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave
