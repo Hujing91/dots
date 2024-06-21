@@ -29,7 +29,7 @@ in
         lazygit
         ncurses
         tailspin
-        yeet
+        #yeet
 
         unixtools.watch
       ];

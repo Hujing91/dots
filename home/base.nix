@@ -1,4 +1,4 @@
-{ pkgs, user, home-manager, ... }:
+{ pkgs, user, ... }:
 {
   imports = [
     ./components
