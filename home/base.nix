@@ -1,4 +1,4 @@
-{ user, ... }:
+{ pkgs, user, ... }:
 {
   imports = [
     ./components
@@ -6,10 +6,7 @@
   ];
 
   home = {
-    modules = {
-      console.enable = true;
-    };
-
+    stateVersion = "24.05";
     username = "${user}";
     homeDirectory = "/home/${user}";
     enableNixpkgsReleaseCheck = false; # !Check whats going on with the hom manager version!
