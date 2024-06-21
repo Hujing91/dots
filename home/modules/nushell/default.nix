@@ -10,7 +10,7 @@ in
   config = mkIf cnfg.enable {
     home = {
       components = {
-        direnv.enable = true;
+        #direnv.enable = true;
         starship.enable = true;
       };
 
