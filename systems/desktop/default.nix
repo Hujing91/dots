@@ -33,11 +33,11 @@
   networking.networkmanager.enable = true;
 
   # Enable the X11 windowing system.
-  #services.xserver.enable = true;
+  services.xserver.enable = true;
 
   # Enable the GNOME Desktop Environment.
-  #services.xserver.displayManager.gdm.enable = true;
-  #services.xserver.desktopManager.gnome.enable = true;
+  services.xserver.displayManager.gdm.enable = true;
+  services.xserver.desktopManager.gnome.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -96,15 +96,15 @@
   # Will be exposed through DBus to programs willing to store secrets.
   services.gnome.gnome-keyring.enable = true;
 
-  modules = {
-    #gtk.enable = true;
-    tuigreet = {
-      enable = true;
-      command = "sway";
-      # command = "Hyprland";
-    };
-    #xdg.enable = true;
-  };
+  #modules = {
+  #  #gtk.enable = true;
+  #  tuigreet = {
+  #    enable = true;
+  #    command = "sway";
+  #    # command = "Hyprland";
+  #  };
+  #  #xdg.enable = true;
+  #};
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
