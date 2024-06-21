@@ -5,6 +5,7 @@
     ./foot
     ./logseq
     ./rofi
+    ./starship
     ./swww
     ./zellij
   ];
