@@ -1,9 +1,9 @@
 { ... }:
 {
   imports = [
-    ./alacritty
-    ./foot
-    ./rofi
+    #./alacritty
+    #./foot
+    #./rofi
     ./zellij
   ];
 }

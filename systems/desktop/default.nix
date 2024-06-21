@@ -69,7 +69,10 @@
   };
 
   # Install firefox.
-  programs.firefox.enable = true;
+  programs = {
+    firefox.enable = true;
+    steam.enable = true;
+  };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
