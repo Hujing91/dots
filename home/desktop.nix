@@ -13,7 +13,7 @@
       foot.enable = true;
 
       logseq.enable = true;
-    #  swww.enable = true;
+      swww.enable = true;
     };
 
     #modules = {
