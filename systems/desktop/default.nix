@@ -84,6 +84,16 @@
     slurp # screenshot functionality
     wl-clipboard # wl-copy and wl-paste for copy/paste from stdin / stdout
     mako # notification system developed by swaywm maintainer
+
+    (lutris.override {
+      extraLibraries =  pkgs: [
+        # List library dependencies here
+      ];
+      extraPkgs = pkgs: [
+        winePackages.staging
+        wine64Packages.staging
+      ];
+    })
   ];
 
   # Enable the gnome-keyring secrets vault. 
