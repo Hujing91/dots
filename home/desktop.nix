@@ -17,7 +17,7 @@
     };
 
     modules = {
-      #gtk.enable = true;
+      gtk.enable = true;
       #sway.enable = true;
       #xdg.enable = true;
     };

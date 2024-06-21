@@ -33,15 +33,15 @@
     # Will be exposed through DBus to programs willing to store secrets.
     gnome.gnome-keyring.enable = true;
 
-    #modules = {
-      #gtk.enable = true;
+    modules = {
+      gtk.enable = true;
       #tuigreet = {
       #  enable = true;
       #  command = "sway";
       #  # command = "Hyprland";
       #};
       #xdg.enable = true;
-    #};
+    };
 
     pipewire = {
       enable = true;
