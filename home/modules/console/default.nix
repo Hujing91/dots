@@ -9,12 +9,12 @@ in
 
   config = mkIf cnfg.enable {
     home = {
-      #components = {
+      components = {
         #fzf.enable = true;
         #git.enable = true;
         #ssh.enable = true;
-        #zellij.enable = true;
-      #};
+        zellij.enable = true;
+      };
 
       #modules = {
       #  neocode.enable = true;
