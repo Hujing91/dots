@@ -1,0 +1,18 @@
+import = [
+    "~/.config/alacritty/themes/tokyo-night.toml",
+    "~/AppData/Roaming/alacritty/themes/tokyo-night.toml",
+]
+
+shell = "nu"
+
+[font]
+size = 12
+offset = { x = 0, y = 2 }
+
+normal = { family = 'UbuntuMono Nerd Font', style = 'Regular' }
+
+[keyboard]
+bindings = [
+    { key = "d", mods = "Control|Alt", action = "ScrollHalfPageDown" },
+    { key = "u", mods = "Control|Alt", action = "ScrollHalfPageUp" },
+]

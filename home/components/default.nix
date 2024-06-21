@@ -1,6 +1,8 @@
 { ... }:
 {
   imports = [
+    ./alacritty
+    ./foot
     ./zellij
   ];
 }
