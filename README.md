@@ -1,4 +1,4 @@
-# Flake on fresh install
+# Flake on fresh NixOS install
 - Boot into ISO
 - In terminal:
   - $ sudo su
@@ -12,4 +12,4 @@
 
 
 # Rebuild after change:
-- $ sudo nixos-rebuild switch --flake .#desktop
+Example: $ sudo nixos-rebuild switch --flake .#desktop
