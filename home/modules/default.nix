@@ -5,5 +5,6 @@
     ./gtk
     ./screenshot
     ./sway
+    ./xdg
   ];
 }
