@@ -2,6 +2,7 @@
 {
   imports = [
     ./console
+    ./gtk
     ./screenshot
     ./sway
   ];
