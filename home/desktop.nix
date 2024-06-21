@@ -6,18 +6,15 @@
   ];
 
   home = {
-    #components = {
-    #  alacritty.enable = true;
-    #  chrome.enable = true;
-    #  docker.enable = true;
+    components = {
+      alacritty.enable = true;
 
       # NOTE: fallback terminal
-    #  foot.enable = true;
+      foot.enable = true;
 
     #  logseq.enable = true;
-    #  onedrive.enable = true;
     #  swww.enable = true;
-    #};
+    };
 
     #modules = {
     #  gtk.enable = true;
