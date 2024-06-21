@@ -2,7 +2,7 @@
 {
   imports = [
     #./alacritty
-    #./foot
+    ./foot
     #./rofi
     ./zellij
   ];
