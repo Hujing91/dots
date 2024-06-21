@@ -5,7 +5,7 @@ let
   cnfg = config.users.hujing;
 in
 {
-  options.users.serowy = {
+  options.users.hujing = {
     enable = mkEnableOption "hujing user";
   };
 

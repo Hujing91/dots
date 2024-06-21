@@ -1,4 +1,4 @@
 { ... }:
 {
-  imports = [ ./serowy.nix ];
+  imports = [ ./hujing.nix ];
 }

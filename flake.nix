@@ -25,6 +25,13 @@
           specialArgs = { inherit user inputs; };
           modules = [
             ./systems/desktop
+            {
+              imports = [ ./users ];
+
+              users.${user} = {
+                enable = true;
+              };
+            }
             
             home-manager.nixosModules.home-manager {
               home-manager.useGlobalPkgs = true;
