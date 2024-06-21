@@ -12,7 +12,7 @@
       # NOTE: fallback terminal
       foot.enable = true;
 
-    #  logseq.enable = true;
+      logseq.enable = true;
     #  swww.enable = true;
     };
 
