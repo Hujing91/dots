@@ -58,7 +58,7 @@ in
         };
 
         file = {
-          ".config/sway/config".source = builtins.toFile "sway-config" ''
+          ".config/sway/config/config".source = builtins.toFile "sway-config" ''
             ${cnfg.prependedConfig}
 
             # programs

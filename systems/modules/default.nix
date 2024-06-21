@@ -1,8 +1,8 @@
 { ... }:
 {
   imports = [
-    #./gtk
+    ./gtk
     ./tuigreet
-    #./xdg
+    ./xdg
   ];
 }

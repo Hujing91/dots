@@ -38,13 +38,13 @@
     gnome.gnome-keyring.enable = true;
 
     modules = {
-      #gtk.enable = true;
+      gtk.enable = true;
       tuigreet = {
         enable = true;
         command = "sway";
         # command = "Hyprland";
       };
-      #xdg.enable = true;
+      xdg.enable = true;
     };
 
     pipewire = {
