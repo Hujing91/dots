@@ -2,7 +2,7 @@
 {
   imports = [
     ./console
-    #./screenshot
+    ./screenshot
     ./sway
   ];
 }
