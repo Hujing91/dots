@@ -1,6 +1,6 @@
 { home-manager, ... }:
 {
   imports = [
-    #./sway
+    ./sway
   ];
 }

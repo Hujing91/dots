@@ -67,13 +67,6 @@ in
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.${user} = {
-    isNormalUser = true;
-    description = user;
-    extraGroups = [ "networkmanager" "wheel" ];
-  };
-
   # Install firefox.
   programs.firefox.enable = true;
 
