@@ -1,3 +1,7 @@
+# STARTUP
+
+exec_always ~/.config/sway/scripts/gsettings.shf
+
 # use these keys for focus, movement, and resize directions when reaching for
 # the arrows is not convenient
 set $up l
@@ -10,7 +14,7 @@ floating_modifier Mod1
 
 # move tiling windows via drag & drop by left-clicking into the title bar,
 # or left-clicking anywhere into the window while holding the floating modifier.
-tiling_drag modifier titlebar
+tiling_drag enable
 
 # start a terminal
 bindsym Mod1+Return exec foot

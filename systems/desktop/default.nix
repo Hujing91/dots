@@ -13,7 +13,7 @@
   boot.loader = {
     systemd-boot = {
       enable = true;
-      configurationLimit = 5;
+      configurationLimit = 20;
     };
     efi.canTouchEfiVariables = true;
     timeout = 2;
@@ -54,11 +54,11 @@
 
     modules = {
       gtk.enable = true;
-      #tuigreet = {
-      #  enable = true;
-      #  command = "sway";
-      #  # command = "Hyprland";
-      #};
+      tuigreet = {
+        enable = true;
+        command = "sway";
+        # command = "Hyprland";
+      };
       #xdg.enable = true;
     };
 
@@ -74,11 +74,11 @@
 
     xserver = {
       # Enable the X11 windowing system.
-      enable = true;
+      #enable = true;
 
       # Enable the GNOME Desktop Environment.
-      displayManager.gdm.enable = true;
-      desktopManager.gnome.enable = true;
+      #displayManager.gdm.enable = true;
+      #desktopManager.gnome.enable = true;
 
       #NVIDIA SETTINGS
       # Load nvidia driver for Xorg and Wayland
