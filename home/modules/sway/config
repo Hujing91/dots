@@ -48,8 +48,8 @@ set $right l
 
 ## Applications
 
-bindsym $mod+b exec $browser
-bindsym $mod+e exec $explorer
+# bindsym $mod+b exec $browser
+# bindsym $mod+e exec $explorer
 bindsym $mod+space exec $menu
 bindsym $mod+t exec foot # exec $terminal
 
