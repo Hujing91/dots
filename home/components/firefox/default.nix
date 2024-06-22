@@ -63,6 +63,7 @@ in
             DisableFirefoxAccounts = true;
             DisableAccounts = true;
             DisableFirefoxScreenshots = true;
+            DisableFormHistory = true;
             OverrideFirstRunPage = "";
             OverridePostUpdatePage = "";
             DontCheckDefaultBrowser = true;
@@ -116,6 +117,22 @@ in
                 install_url = "https://addons.mozilla.org/firefox/downloads/latest/privacy-badger17/latest.xpi";
                 installation_mode = "force_installed";
               };
+              ## Remove Preinstalled Extensions
+              # Bing:
+              "bing@search.mozilla.org" = {
+                install_url = "https://addons.mozilla.org/firefox/downloads/latest/bing-search-engine-/latest.xpi";
+                installation_mode = "blocked";
+              };
+              # Google:
+              "google@search.mozilla.org" = {
+                install_url = "https://addons.mozilla.org/firefox/downloads/latest/google-search-contextmenu/latest.xpi";
+                installation_mode = "blocked";
+              };
+              # Wikipedia (en):
+              "wikipedia@search.mozilla.org" = {
+                install_url = "https://addons.mozilla.org/firefox/downloads/latest/quick-search-for-wikipedia/latest.xpi";
+                installation_mode = "blocked";
+              };
             };
 
             /* ---- PREFERENCES ---- */
@@ -129,7 +146,9 @@ in
               "browser.search.suggest.enabled" = lock-false;
               "browser.search.suggest.enabled.private" = lock-false;
               "browser.urlbar.suggest.searches" = lock-false;
+              "browser.urlbar.suggest.history" = lock-false;
               "browser.urlbar.showSearchSuggestionsFirst" = lock-false;
+              "browser.urlbar.shortcuts.history" = false;
               "browser.newtabpage.activity-stream.feeds.section.topstories" = lock-false;
               "browser.newtabpage.activity-stream.feeds.snippets" = lock-false;
               "browser.newtabpage.activity-stream.section.highlights.includePocket" = lock-false;
