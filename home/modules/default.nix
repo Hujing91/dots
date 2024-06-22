@@ -1,6 +1,7 @@
 { home-manager, ... }:
 {
   imports = [
+    ./browser
     ./clipboard
     ./console
     ./gtk
