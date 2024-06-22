@@ -14,6 +14,7 @@
     ./services
     ./starship
     ./swww
+    ./tor
     ./traffic
     ./web
     ./zellij
