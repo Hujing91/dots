@@ -21,7 +21,7 @@
       killall         # Stop Applications
       usbutils        # USB utility info
       pciutils        # Computer utility info
-      xterm
+
       grim            # screenshot functionality
       slurp           # screenshot functionality
       wl-clipboard    # wl-copy and wl-paste for copy/paste from stdin / stdout
