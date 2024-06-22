@@ -7,6 +7,7 @@
   home = {
     components = {
       alacritty.enable = true;
+      firefox.enable = true;
 
       # NOTE: fallback terminal
       foot.enable = true;

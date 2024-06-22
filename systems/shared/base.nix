@@ -92,7 +92,6 @@
   };
 
   programs = {
-    firefox.enable = true;
     dconf.enable = true;
   };
 
