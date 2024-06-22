@@ -16,33 +16,32 @@
 
     packages = with pkgs; [
         # Terminal
-        #btop		# Ressource Manager
-        #pfetch		# Minimal fetch
-        #ranger		# File Manager
+        #btop		            # Ressource Manager
+        #pfetch		          # Minimal fetch
+        #ranger		          # File Manager
         htop
         
         # Video/Audio
-        #feh		      # Image Viewer
-        #mpv		      # Media Player
-        #obs-studio		# Broadcasting
-        #pavucontrol	# Audio control
+        #feh		            # Image Viewer
+        #mpv		            # Media Player
+        #obs-studio		      # Broadcasting
+        #pavucontrol	      # Audio control
         #plex-media-player	# Media Player
-        #vlc		# Media Player
-        #stremio		# Media Streamer
+        #vlc		            # Media Player
+        #stremio		        # Media Streamer
         
         # Apps
-        #pcmanfm		# File Manager
-        #remmina		# XRDP Client
+        #pcmanfm		        # File Manager
+        #remmina		        # XRDP Client
         
         # File Management
-        #unzip		# Zip files
-        #unrar		# Rar files
+        unzip		            # Zip files
+        unrar		            # Rar files
         
         # General configuration
-        vscodium		# IDE
-        #neovim		# Text Editor
-        #pulsaudio		# Sound
-        #zsh		# Shell
+        vscodium		        # IDE
+        #neovim		          # Text Editor
+        zsh		              # Shell
     ];
   };
 

@@ -85,7 +85,7 @@
     };
     
   };
-
+  
   nixpkgs = {
     config = {
       allowUnfree = true;

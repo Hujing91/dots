@@ -26,6 +26,17 @@
       discord
       teams-for-linux
       vmware-horizon-client
+      obsidian
+
+      (lutris.override {
+        extraLibraries =  pkgs: [
+          # List library dependencies here
+        ];
+        extraPkgs = pkgs: [
+          winePackages.staging
+          wine64Packages.staging
+        ];
+      })
     ];
   };
 }
