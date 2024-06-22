@@ -79,7 +79,7 @@ in
         };
 
         modules = {
-          #browser.enable = true; #
+          browser.enable = true;
           clipboard.enable = true;
           notification.enable = true;
           sidebar = {
