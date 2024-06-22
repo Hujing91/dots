@@ -8,9 +8,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
+    cybersecurity = {
+      url = "github:hujing91/nix-security-box";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, hardware, home, nixpkgs, ... }:
+  outputs = { self, hardware, home, nixpkgs, cybersecurity, ... }:
     let
       user = "hujing";
     in
