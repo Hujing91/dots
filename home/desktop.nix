@@ -25,7 +25,7 @@
     modules = {
       gtk.enable = true;
       sway.enable = true;
-      xdg.enable = true;
+      #xdg.enable = true;
     };
 
     packages = with pkgs; [
