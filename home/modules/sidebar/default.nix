@@ -64,10 +64,10 @@ in
         ];
       };
 
-      #home.modules.hyprland.additionalConfig = mkIf cnfg.enableHyprlandIntegration ''
-      #  # Init sidebar
-      #  exec-once = eww open --config ~/.config/eww/sidebar/ sidebar
-      #'';
+      home.modules.hyprland.additionalConfig = mkIf cnfg.enableHyprlandIntegration ''
+        # Init sidebar
+        exec-once = eww open --config ~/.config/eww/sidebar/ sidebar
+      '';
 
       home.modules.sway.appendedConfig = mkIf cnfg.enableSwayIntegration ''
         # Init sidebar

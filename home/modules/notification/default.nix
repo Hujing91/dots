@@ -12,10 +12,10 @@ in
       components = {
         dunst.enable = true;
 
-        #edge = {
-        #  enable = true;
-        #  enableDunstIntegration = true;
-        #github};
+        firefox = {
+          enable = true;
+          enableDunstIntegration = true;
+        };
 
         rofi.enable = true;
       };

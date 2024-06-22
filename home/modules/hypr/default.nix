@@ -32,7 +32,7 @@ in
     };
   };
 
-  config =
+  config = 
     let
       hyprlandConfig = builtins.readFile ./hyprland.conf;
 

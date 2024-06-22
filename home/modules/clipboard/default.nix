@@ -16,13 +16,13 @@ in
       '';
     };
 
-    #enableHyprlandIntegration = mkOption {
-    #  type = types.bool;
-    #  default = true;
-    #  description = ''
-    #    If enabled, init clipman with wl-clipboard tools in hyprland.
-    #  '';
-    #};
+    enableHyprlandIntegration = mkOption {
+      type = types.bool;
+      default = true;
+      description = ''
+        If enabled, init clipman with wl-clipboard tools in hyprland.
+      '';
+    };
   };
 
   config = mkIf cnfg.enable {
@@ -40,9 +40,9 @@ in
       exec wl-paste -t text --watch clipman store --no-persist
     '';
 
-    #home.modules.hyprland.additionalConfig = mkIf cnfg.enableHyprlandIntegration ''
-    #  # Init clipman with wl-clipboard tools
-    #  exec-once = wl-paste -t text --watch clipman store --no-persist
-    #'';
+    home.modules.hyprland.additionalConfig = mkIf cnfg.enableHyprlandIntegration ''
+      # Init clipman with wl-clipboard tools
+      exec-once = wl-paste -t text --watch clipman store --no-persist
+    '';
   };
 }

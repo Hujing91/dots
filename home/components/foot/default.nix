@@ -38,9 +38,9 @@ in
       };
     };
 
-    #home.modules.hyprland = mkIf cnfg.enableAsHyprlandDefaultTerminal {
-    #  defaultTerminal = "foot";
-    #  tuiLaunchCommand = "foot [PROG]";
-    #};
+    home.modules.hyprland = mkIf cnfg.enableAsHyprlandDefaultTerminal {
+      defaultTerminal = "foot";
+      tuiLaunchCommand = "foot [PROG]";
+    };
   };
 }

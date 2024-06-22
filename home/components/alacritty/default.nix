@@ -37,10 +37,10 @@ in
       ];
     };
 
-    #home.modules.hyprland = mkIf cnfg.enableAsHyprlandDefaultTerminal {
-    #  defaultTerminal = "alacritty";
-    #  tuiLaunchCommand = "alacritty --command [PROG]";
-    #};
+    home.modules.hyprland = mkIf cnfg.enableAsHyprlandDefaultTerminal {
+      defaultTerminal = "alacritty";
+      tuiLaunchCommand = "alacritty --command [PROG]";
+    };
 
     home.modules.sway = mkIf cnfg.enableAsSwayDefaultTerminal {
       defaultTerminal = "alacritty";

@@ -16,13 +16,13 @@ in
       '';
     };
 
-    #enableHyprlandIntegration = mkOption {
-    #  type = types.bool;
-    #  default = true;
-    #  description = ''
-    #    If enabled, the swww script gets added to hyprland config.
-    #  '';
-    #};
+    enableHyprlandIntegration = mkOption {
+      type = types.bool;
+      default = true;
+      description = ''
+        If enabled, the swww script gets added to hyprland config.
+      '';
+    };
   };
 
   config = mkIf cnfg.enable {
@@ -40,10 +40,10 @@ in
       exec bash ~/.config/swww/wallpaper.sh ~/onedrive/Wallpapers/
     '';
 
-    #home.modules.hyprland.additionalConfig = mkIf cnfg.enableHyprlandIntegration ''
-    #  # Start swww daemon and cycle through random wallpaper
-    #  exec-once = swww-daemon
-    #  exec-once = bash ~/.config/swww/wallpaper.sh ~/onedrive/Wallpapers/
-    #'';
+    home.modules.hyprland.additionalConfig = mkIf cnfg.enableHyprlandIntegration ''
+      # Start swww daemon and cycle through random wallpaper
+      exec-once = swww-daemon
+      exec-once = bash ~/.config/swww/wallpaper.sh ~/onedrive/Wallpapers/
+    '';
   };
 }

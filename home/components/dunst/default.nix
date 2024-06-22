@@ -141,9 +141,9 @@ in
         exec dunst -conf ~/.config/dunst/dunstrc
       '';
 
-      #home.modules.hyprland.additionalConfig = mkIf cnfg.enableHyprlandIntegration ''
-      #  # Start dunst daemon to enable notifications
-      #  exec-once = dunst -conf ~/.config/dunst/dunstrc
-      #'';
+      home.modules.hyprland.additionalConfig = mkIf cnfg.enableHyprlandIntegration ''
+        # Start dunst daemon to enable notifications
+        exec-once = dunst -conf ~/.config/dunst/dunstrc
+      '';
     };
 }
