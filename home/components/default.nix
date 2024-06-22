@@ -3,6 +3,7 @@
   imports = [
     ./alacritty
     ./foot
+    ./fuzzers
     ./logseq
     ./rofi
     ./starship

@@ -21,7 +21,6 @@
       killall         # Stop Applications
       usbutils        # USB utility info
       pciutils        # Computer utility info
-      wget            # Downloader
       xterm
       grim            # screenshot functionality
       slurp           # screenshot functionality

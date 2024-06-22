@@ -53,7 +53,6 @@
     gnome.gnome-keyring.enable = true;
 
     modules = {
-      cybersecurity.enable = true;
       gtk.enable = true;
       #tuigreet = {
       #  enable = true;

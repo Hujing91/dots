@@ -16,11 +16,11 @@
 
     packages = with pkgs; [
         # Terminal
-        #btop		            # Ressource Manager
         #pfetch		          # Minimal fetch
         #ranger		          # File Manager
         htop
-        
+        wget                # Downloader
+
         # Video/Audio
         #feh		            # Image Viewer
         #mpv		            # Media Player

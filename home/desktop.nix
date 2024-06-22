@@ -11,6 +11,7 @@
       # NOTE: fallback terminal
       foot.enable = true;
 
+      fuzzers.enable = true;
       logseq.enable = true;
       swww.enable = true;
     };
@@ -26,6 +27,11 @@
       teams-for-linux
       vmware-horizon-client
       obsidian
+      curl
+      cyberchef
+      nano
+      parted
+      btop              # Ressource Manager
 
       (lutris.override {
         extraLibraries =  pkgs: [
