@@ -32,6 +32,8 @@
     ];
   
   hardware = {
+    pulseaudio.enable = false;
+
     cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 
     opengl = {

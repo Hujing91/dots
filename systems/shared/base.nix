@@ -54,7 +54,7 @@
   console.keyMap = "de";
 
   networking = {
-    useDHCP = true;
+    useDHCP = lib.mkDefault true;
     networkmanager.enable = true;
   };
 
