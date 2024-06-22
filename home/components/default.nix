@@ -6,7 +6,7 @@
     ./fuzzers
     ./logseq
     ./password
-    ./portscanners
+    ./port-scanners
     ./proxies
     ./rofi
     ./services

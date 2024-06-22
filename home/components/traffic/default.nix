@@ -27,7 +27,7 @@ in
         #tcpreplay
         #termshark
         wireshark
-        wireshark-cli
+        #wireshark-cli
         #zeek
       ];
     };
