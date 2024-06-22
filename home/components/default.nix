@@ -2,6 +2,7 @@
 {
   imports = [
     ./alacritty
+    ./dunst
     ./foot
     ./fuzzers
     ./logseq
