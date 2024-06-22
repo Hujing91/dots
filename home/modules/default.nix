@@ -4,6 +4,7 @@
     ./clipboard
     ./console
     ./gtk
+    ./hypr
     ./notification
     ./nushell
     ./screenshot
