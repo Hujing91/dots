@@ -3,6 +3,10 @@
 #set $browser microsoft-edge-beta
 set $menu exec ~/.config/rofi/launch.nu drun
 
+# INPUTS
+
+input type:keyboard xkb_layout "de"
+
 # OUTPUTS
 
 output DP-3 position 0 0
