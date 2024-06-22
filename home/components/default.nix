@@ -3,6 +3,7 @@
   imports = [
     ./alacritty
     ./dunst
+    ./firefox
     ./foot
     ./fuzzers
     ./logseq
