@@ -36,10 +36,8 @@
 
     cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 
-    opengl = {
+    graphics = {
       enable = lib.mkDefault true;
-      driSupport = true;
-      driSupport32Bit = true;
     };
 
     nvidia = {

@@ -12,8 +12,6 @@
       console.enable = true;
     };
 
-    enableNixpkgsReleaseCheck = false; # !Check whats going on with the hom manager version!
-
     packages = with pkgs; [
         # Terminal
         #pfetch		          # Minimal fetch

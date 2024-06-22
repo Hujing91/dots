@@ -37,7 +37,7 @@
     config = {
       # FIX: remove this once packages are updated: https://github.com/standardnotes/forum/issues/3626
       permittedInsecurePackages = [
-        "electron-27.3.11"
+        "electron-28.3.3"
       ];
     };
   };
