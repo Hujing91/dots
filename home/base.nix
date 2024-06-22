@@ -39,14 +39,9 @@
         #unrar		# Rar files
         
         # General configuration
-        git			# Repositories
         vscodium		# IDE
-        #killall		# Stop Applications
         #neovim		# Text Editor
-        #pciutils		# Computer utility info
-        #usbutils		# USB utility info
         #pulsaudio		# Sound
-        #wget		# Downloader
         #zsh		# Shell
     ];
   };

@@ -33,8 +33,17 @@
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable = true;
 
+  nixpkgs = {
+    config = {
+      # FIX: remove this once packages are updated: https://github.com/standardnotes/forum/issues/3626
+      permittedInsecurePackages = [
+        "electron-27.3.11"
+      ];
+    };
+  };
+
   programs = {
-    firefox.enable = true;
+    seahorse.enable = true;
     steam.enable = true;
   };
 
@@ -55,15 +64,12 @@
 
     pipewire = {
       enable = true;
-      alsa.enable = true;
-      alsa.support32Bit = true;
+      alsa = {
+        enable = true;
+        support32Bit = true;
+      };
+      jack.enable = true;
       pulse.enable = true;
-      # If you want to use JACK applications, uncomment this
-      #jack.enable = true;
-
-      # use the example session manager (no others are packaged yet so this is enabled by default,
-      # no need to redefine it in your config for now)
-      #media-session.enable = true;
     };
 
     xserver = {
@@ -92,11 +98,6 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    grim # screenshot functionality
-    slurp # screenshot functionality
-    wl-clipboard # wl-copy and wl-paste for copy/paste from stdin / stdout
-    mako # notification system developed by swaywm maintainer
-
     (lutris.override {
       extraLibraries =  pkgs: [
         # List library dependencies here

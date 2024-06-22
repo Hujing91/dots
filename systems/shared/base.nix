@@ -1,25 +1,94 @@
 { config, lib, pkgs, inputs, user, ... }:
-let
-  stateVersion = "24.05";
-in
 {
   imports = [
     ../modules
   ];
 
+  boot = {
+    readOnlyNixStore = false;
+    tmp.cleanOnBoot = true;
+  };
+
+  environment = {
+    defaultPackages = [ ];
+
+    systemPackages = with pkgs; [
+      acpi
+      git             # Repositories
+      mkpasswd
+      smartmontools
+
+      killall         # Stop Applications
+      usbutils        # USB utility info
+      pciutils        # Computer utility info
+      wget            # Downloader
+      xterm
+      grim            # screenshot functionality
+      slurp           # screenshot functionality
+      wl-clipboard    # wl-copy and wl-paste for copy/paste from stdin / stdout
+      mako            # notification system developed by swaywm maintainer
+    ];
+  };
+
   nix = {
-    settings.auto-optimise-store = true;
+    package = pkgs.nixVersions.stable;
+    extraOptions = ''
+      experimental-features = nix-command flakes
+      keep-outputs = true
+      keep-derivations = true
+    '';
+
     gc = {
       automatic = true;
       dates = "weekly";
-      options = "--delete-older-than 14d";
+      options = "--delete-older-than 7d --max-freed $((64 * 1024**3))";
     };
-    package = pkgs.nixFlakes;
-    extraOptions = "experimental-features = nix-command flakes";
+
+    optimise = {
+      automatic = true;
+      dates = [ "weekly" ];
+    };
+
+    settings = {
+      allowed-users = [ "@wheel" ];
+      auto-optimise-store = true;
+      sandbox = true;
+      trusted-users = [ "@wheel" ];
+    };
+    
   };
 
-  # Set your time zone.
-  time.timeZone = "Europe/Berlin";
+  nixpkgs = {
+    config = {
+      allowUnfree = true;
+    };
+  };
+
+  programs = {
+    firefox.enable = true;
+    dconf.enable = true;
+  };
+
+  security = {
+    rtkit.enable = true;
+
+    sudo.enable = true;
+    doas.enable = true;
+  };
+
+  services = {
+    dbus = {
+      enable = true;
+      packages = [ pkgs.dconf ];
+    };
+
+    # don’t shutdown when power button is short-pressed
+    logind.extraConfig = ''
+      HandlePowerKey=suspend
+    '';
+
+    printing.enable = true;
+  };
 
   # Select internationalisation properties.
   i18n.defaultLocale = "de_DE.UTF-8";
@@ -36,58 +105,23 @@ in
     LC_TIME = "de_DE.UTF-8";
   };
 
-  # Configure console keymap
+  system = {
+    stateVersion = "24.05";
+
+    autoUpgrade = {
+      enable = true;
+      allowReboot = true;
+      flake = "github:hujing91/dots";
+      flags = [
+        "--recreate-lock-file"
+        "--no-write-lock-file"
+        "-L"
+      ];
+      dates = "03:45";
+    };
+  };
+
+  time.timeZone = "Europe/Berlin";
+
   console.keyMap = "de";
-
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
-
-  # Enable sound with pipewire.
-  hardware.pulseaudio.enable = false;
-  security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-    # If you want to use JACK applications, uncomment this
-    #jack.enable = true;
-
-    # use the example session manager (no others are packaged yet so this is enabled by default,
-    # no need to redefine it in your config for now)
-    #media-session.enable = true;
-  };
-
-  # Install firefox.
-  programs.firefox.enable = true;
-
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    git
-    killall
-    usbutils
-    pciutils
-    wget
-    xterm
-    grim # screenshot functionality
-    slurp # screenshot functionality
-    wl-clipboard # wl-copy and wl-paste for copy/paste from stdin / stdout
-    mako # notification system developed by swaywm maintainer
-  ];
-
-  # This value determines the NixOS release from which the default
-  # settings for stateful data, like file locations and database versions
-  # on your system were taken. It‘s perfectly fine and recommended to leave
-  # this value at the release version of the first install of this system.
-  # Before changing this value read the documentation for this option
-  # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = stateVersion; # Did you read the comment?
-  system.autoUpgrade = {
-    enable = true;
-    channel = "https://nixos.org/channels/nixos-${stateVersion}";
-  };
 }
