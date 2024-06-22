@@ -3,7 +3,6 @@
   imports = [
     ./clipboard
     ./console
-    ./gnome
     ./gtk
     ./notification
     ./nushell
