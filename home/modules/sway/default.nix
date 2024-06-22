@@ -86,7 +86,7 @@ in
           #  enable = true;
           #  dashboardBackgroundOpacity = "0.75";
           #};
-          #statusbar.enable = true;
+          statusbar.enable = true;
         };
 
         packages = with pkgs; [

@@ -6,6 +6,7 @@
     ./gtk
     ./nushell
     ./screenshot
+    ./sidebar
     ./statusbar
     ./sway
     ./xdg
