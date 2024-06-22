@@ -19,6 +19,16 @@
     timeout = 2;
   };
   
+  fonts = {
+    fontDir.enable = true;
+    enableGhostscriptFonts = true;
+    packages = with pkgs; [
+      inter
+      powerline-fonts
+      nerdfonts
+    ];
+  };
+
   networking.hostName = "nixos-desktop";
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable = true;

@@ -24,7 +24,6 @@
 
     packages = with pkgs; [
       discord
-      nerdfonts
       teams-for-linux
       vmware-horizon-client
     ];
