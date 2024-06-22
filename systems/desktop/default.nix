@@ -54,11 +54,11 @@
 
     modules = {
       gtk.enable = true;
-      #tuigreet = {
-      #  enable = true;
-      #  command = "sway";
-      #  # command = "Hyprland";
-      #};
+      tuigreet = {
+        enable = true;
+        command = "sway";
+        # command = "Hyprland";
+      };
       #xdg.enable = true;
     };
 
