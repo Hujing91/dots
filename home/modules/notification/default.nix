@@ -15,7 +15,7 @@ in
         #edge = {
         #  enable = true;
         #  enableDunstIntegration = true;
-        #};
+        #github};
 
         rofi.enable = true;
       };
