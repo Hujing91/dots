@@ -30,10 +30,10 @@
   };
 
   networking.hostName = "nixos-desktop";
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-  networking.networkmanager.enable = true;
-
+  
   nixpkgs = {
+    hostPlatform = "x86_64-linux";
+
     config = {
       # FIX: remove this once packages are updated: https://github.com/standardnotes/forum/issues/3626
       permittedInsecurePackages = [

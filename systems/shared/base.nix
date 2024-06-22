@@ -30,8 +30,6 @@
     ];
   };
 
-  
-
   # Select internationalisation properties.
   i18n = {
     defaultLocale = "de_DE.UTF-8";
@@ -54,6 +52,11 @@
   };
 
   console.keyMap = "de";
+
+  networking = {
+    useDHCP = true;
+    networkmanager.enable = true;
+  };
 
   nix = {
     package = pkgs.nixVersions.stable;

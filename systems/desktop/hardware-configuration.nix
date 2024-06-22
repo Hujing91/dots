@@ -30,17 +30,12 @@
   swapDevices =
     [ { device = "/dev/disk/by-uuid/791aef91-d5e0-4889-a47b-ea6a5948b682"; }
     ];
-
-  networking.useDHCP = lib.mkDefault true;
-  nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   
   hardware = {
     cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 
-    pulseaudio.enable = false;
-
     opengl = {
-      enable = true;
+      enable = lib.mkDefault true;
       driSupport = true;
       driSupport32Bit = true;
     };
