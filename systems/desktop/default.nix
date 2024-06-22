@@ -80,12 +80,6 @@
       displayManager.gdm.enable = true;
       desktopManager.gnome.enable = true;
 
-      # Configure keymap in X11
-      xkb = {
-        layout = "de";
-        variant = "";
-      };
-
       #NVIDIA SETTINGS
       # Load nvidia driver for Xorg and Wayland
       videoDrivers = ["nvidia-dkms"];

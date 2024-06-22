@@ -108,17 +108,17 @@
   system = {
     stateVersion = "24.05";
 
-    autoUpgrade = {
-      enable = true;
-      allowReboot = true;
-      flake = "github:hujing91/dots";
-      flags = [
-        "--recreate-lock-file"
-        "--no-write-lock-file"
-        "-L"
-      ];
-      dates = "03:45";
-    };
+    #autoUpgrade = {
+    #  enable = true;
+    #  allowReboot = true;
+    #  flake = "github:hujing91/dots";
+    #  flags = [
+    #    "--recreate-lock-file"
+    #    "--no-write-lock-file"
+    #    "-L"
+    #  ];
+    #  dates = "03:45";
+    #};
   };
 
   time.timeZone = "Europe/Berlin";
