@@ -17,7 +17,7 @@
     };
 
     modules = {
-      cybersecurity = true;
+      cybersecurity.enable = true;
       gtk.enable = true;
       sway.enable = true;
       #xdg.enable = true;

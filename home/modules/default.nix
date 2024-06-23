@@ -5,6 +5,7 @@
     ./clipboard
     ./console
     ./console
+    ./cybersecurity
     ./gtk
     ./hypr
     ./notification
