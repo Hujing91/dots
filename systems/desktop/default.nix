@@ -57,8 +57,8 @@
       #tor.enable = true; # TODO: Check detailed configuration
       tuigreet = {
         enable = true;
-        command = "sway";
-        #command = "Hyprland";
+        #command = "sway";
+        command = "Hyprland";
       };
       xdg.enable = true;
     };
