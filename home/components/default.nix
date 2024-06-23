@@ -2,12 +2,17 @@
 {
   imports = [
     ./alacritty
+    ./direnv
+    ./docker
     ./dunst
     ./firefox
     ./foot
     ./fuzzers
+    ./fzf
+    ./lf
     ./logseq
     ./password
+    ./podman
     ./port-scanners
     ./proxies
     ./rofi
@@ -16,6 +21,7 @@
     ./swappy
     ./swaybg
     ./swww
+    ./tmux
     ./traffic
     ./web
     ./zellij
