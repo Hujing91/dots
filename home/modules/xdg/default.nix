@@ -16,7 +16,7 @@ in
       xdg = {
         enable = true;
         userDirs = {
-          enable = true;
+        #  enable = true; # Enabling userDirs crashes home-manager???
           desktop = "$HOME/desktop";
           documents = "$HOME/documents";
           download = "$HOME/downloads";

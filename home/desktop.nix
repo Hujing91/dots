@@ -21,7 +21,7 @@
       gtk.enable = true;
       sway.enable = true;
       #hyprland.enable = true;
-      #xdg.enable = true;
+      xdg.enable = true;
     };
 
     packages = with pkgs; [
