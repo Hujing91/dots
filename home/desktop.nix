@@ -12,18 +12,12 @@
       # NOTE: fallback terminal
       foot.enable = true;
 
-      fuzzers.enable = true;
       logseq.enable = true;
-      password.enable = true;
-      portscanners.enable = true;
-      proxies.enable = true;
-      services.enable = true;
       swww.enable = true;
-      traffic.enable = true;
-      web.enable = true;
     };
 
     modules = {
+      cybersecurity = true;
       gtk.enable = true;
       sway.enable = true;
       #xdg.enable = true;

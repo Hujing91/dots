@@ -4,6 +4,7 @@
     ./browser
     ./clipboard
     ./console
+    ./console
     ./gtk
     ./hypr
     ./notification
