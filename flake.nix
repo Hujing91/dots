@@ -23,6 +23,13 @@
         desktop = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
+            {
+              nixpkgs.overlays = [
+                #neocode.overlays.default
+                yeet.overlays.default
+              ];
+            }
+
             ./systems/desktop
             {
               imports = [ ./users ];
