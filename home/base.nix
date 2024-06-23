@@ -17,7 +17,7 @@
     };
 
     packages = with pkgs; [
-        python3
+        #python3 # collision with libpython3.11
         rdesktop
 
         # Terminal
