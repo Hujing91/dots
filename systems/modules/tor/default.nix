@@ -2,12 +2,10 @@
 with lib;
 
 let
-  cnfg = config.home.components.tor;
+  cnfg = config.services.modules.tor;
 in
 {
-  options.home.components.tor = {
-    enable = mkEnableOption "tor";
-  };
+  options.services.modules.tor.enable = mkEnableOption "tor";
 
   config = mkIf cnfg.enable {
     # https://nixos.wiki/wiki/Tor
@@ -15,7 +13,7 @@ in
       settings = {
         UseBridges = true;
         ClientTransportPlugin = "obfs4 exec ${pkgs.obfs4}/bin/lyrebird";
-        Bridge = "obfs4 IP:ORPort [fingerprint]"
+        Bridge = "obfs4 IP:ORPort [fingerprint]";
       };
       client = {
         enable = true;
