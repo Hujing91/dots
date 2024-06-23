@@ -15,7 +15,7 @@ in
         ipscan
         masscan
         #naabu
-        nmap
+        nmap # ncat should be included
         #udpx
         #sx-go
         #rustscan

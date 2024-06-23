@@ -9,10 +9,14 @@ in {
   config = mkIf cnfg.enable {
     home.components = {
       fuzzers.enable = true;
+      malware.enable = true;
+      network.enable = true;
+      osint.enable = true;
       password.enable = true;
       portscanners.enable = true;
       proxies.enable = true;
       services.enable = true;
+      tls.enable = true;
       traffic.enable = true;
       web.enable = true;
     };

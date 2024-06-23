@@ -27,6 +27,7 @@ in
         #nth
         #phrasendrescher
         #python3Packages.patator
+        hydra
         #thc-hydra
         #truecrack
       ];

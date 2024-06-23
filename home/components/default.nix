@@ -11,6 +11,9 @@
     ./fzf
     ./lf
     ./logseq
+    ./malware
+    ./network
+    ./osint
     ./password
     ./podman
     ./port-scanners
@@ -21,6 +24,7 @@
     ./swappy
     ./swaybg
     ./swww
+    ./tls
     ./tmux
     ./traffic
     ./web

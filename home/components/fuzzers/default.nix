@@ -13,7 +13,7 @@ in
         #afl
         #aflplusplus
         #feroxbuster
-        #ffuf
+        ffuf
         gobuster
         #honggfuzz
         #radamsa

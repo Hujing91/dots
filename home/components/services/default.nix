@@ -15,7 +15,7 @@ in
         #ghunt
         #ike-scan
         #keepwn
-        metasploit
+        metasploit # metasploit-framework
         #nbutools
         #nuclei
         #openrisk

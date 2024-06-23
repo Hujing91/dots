@@ -22,7 +22,7 @@ in
         #ngrep
         #secrets-extractor
         #sniffglue
-        #tcpdump
+        tcpdump
         #tcpflow
         #tcpreplay
         #termshark

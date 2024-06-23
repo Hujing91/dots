@@ -8,11 +8,18 @@
   home = {
     stateVersion = "24.05";
 
+    components = {
+      tmux.enable = true;
+    };
+
     modules = {
       console.enable = true;
     };
 
     packages = with pkgs; [
+        python3
+        rdesktop
+
         # Terminal
         #pfetch		          # Minimal fetch
         #ranger		          # File Manager
@@ -40,6 +47,8 @@
         vscodium		        # IDE
         #neovim		          # Text Editor
         zsh		              # Shell
+        cherrytree
+        vim
     ];
   };
 

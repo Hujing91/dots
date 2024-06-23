@@ -16,10 +16,10 @@ in
         #mitmproxy
         #mubeng
         #proxify
-        #proxychains
+        proxychains
         #redsocks
         #rshijack
-        zap
+        zap # zaproxy
       ];
     };
   };
