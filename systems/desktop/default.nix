@@ -60,7 +60,7 @@
         command = "sway";
         #command = "Hyprland";
       };
-      #xdg.enable = true;
+      xdg.enable = true;
     };
 
     pipewire = {

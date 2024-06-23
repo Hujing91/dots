@@ -18,6 +18,7 @@ in
           xdg-desktop-portal-gtk
           xdg-desktop-portal-hyprland
         ];
+        config.common.default = "*";
         wlr.enable = true;
       };
     };
