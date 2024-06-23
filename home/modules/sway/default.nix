@@ -63,7 +63,7 @@ in
 
             # programs
             set $terminal ${cnfg.defaultTerminal} #
-            #set $explorer ${tuiLaunch "yeet"}
+            set $explorer ${tuiLaunch "yeet"}
 
             # sway config
 

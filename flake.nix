@@ -8,9 +8,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    yeet = {
+      url = "github:aserowy/yeet";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, hardware, home, nixpkgs, ... }:
+  outputs = { self, hardware, home, nixpkgs, yeet, ... }:
     let
       user = "hujing";
     in
