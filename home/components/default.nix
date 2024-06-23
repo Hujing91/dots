@@ -13,6 +13,7 @@
     ./rofi
     ./services
     ./starship
+    ./swappy
     ./swaybg
     ./swww
     ./traffic
