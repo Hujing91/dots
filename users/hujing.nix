@@ -23,6 +23,7 @@ in
           home = "/home/hujing";
           isNormalUser = true;
           description = "hujing";
+          shell = pkgs.nushell;
       };
     };
   };

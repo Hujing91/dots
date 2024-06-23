@@ -16,10 +16,10 @@ in
         zellij.enable = true;
       };
 
-      #modules = {
+      modules = {
       #  neocode.enable = true;
-      #  nushell.enable = true;
-      #};
+        nushell.enable = true;
+      };
 
       packages = with pkgs; [
         bat
