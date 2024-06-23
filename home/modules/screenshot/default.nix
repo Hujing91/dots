@@ -11,9 +11,9 @@ in
     home = {
       file.".config/screenshot".source = ./src;
 
-      #components = {
-      #  swappy.enable = true;
-      #};
+      components = {
+        swappy.enable = true;
+      };
 
       packages = with pkgs; [
         grim

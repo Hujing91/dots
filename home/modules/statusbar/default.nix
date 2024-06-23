@@ -47,10 +47,10 @@ in
       ];
     };
 
-    #home.modules.hyprland.additionalConfig = mkIf cnfg.enableHyprlandIntegration ''
-    #  # Init statusbar
-    #  exec-once = eww open --config ~/.config/eww/statusbar/ statusbar
-    #'';
+    home.modules.hyprland.additionalConfig = mkIf cnfg.enableHyprlandIntegration ''
+      # Init statusbar
+      exec-once = eww open --config ~/.config/eww/statusbar/ statusbar
+    '';
 
     home.modules.sway.appendedConfig = mkIf cnfg.enableSwayIntegration ''
       # Init statusbar
