@@ -10,7 +10,7 @@ in
   config = mkIf cnfg.enable {
     home = {
       packages = with pkgs; [
-        spiderfoot
+        #spiderfoot # not found as nix package
         #cloudbrute
         #enumerepo
         #holehe

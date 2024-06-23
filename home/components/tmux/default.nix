@@ -10,20 +10,20 @@ in
   config = mkIf cnfg.enable {
     home = {
       file = {
-        ".config/tmux/plugins/tmux-continuum/" = {
-          recursive = true;
-          source = pkgs.sources.tmux-continuum.src;
-        };
+        #".config/tmux/plugins/tmux-continuum/" = {
+        #  recursive = true;
+        #  source = pkgs.sources.tmux-continuum.src;
+        #};
 
-        ".config/tmux/plugins/tmux-easy-motion/" = {
-          recursive = true;
-          source = pkgs.sources.tmux-easy-motion.src;
-        };
+        #".config/tmux/plugins/tmux-easy-motion/" = {
+        #  recursive = true;
+        #  source = pkgs.sources.tmux-easy-motion.src;
+        #};
 
-        ".config/tmux/plugins/tmux-resurrect/" = {
-          recursive = true;
-          source = pkgs.sources.tmux-resurrect.src;
-        };
+        #".config/tmux/plugins/tmux-resurrect/" = {
+        #  recursive = true;
+        #  source = pkgs.sources.tmux-resurrect.src;
+        #};
 
         ".tmux.conf" = {
           source = ./tmux.conf;
