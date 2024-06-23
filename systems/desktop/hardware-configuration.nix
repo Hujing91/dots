@@ -36,6 +36,11 @@
 
     cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 
+    bluetooth = {
+      enable = true;
+      powerOnBoot = true;
+    };
+
     graphics = {
       enable = lib.mkDefault true;
     };

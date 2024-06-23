@@ -63,6 +63,8 @@
       #xdg.enable = true;
     };
 
+    blueman.enable = true;
+
     pipewire = {
       enable = true;
       alsa = {
@@ -76,7 +78,7 @@
     xserver = {
       #NVIDIA SETTINGS
       # Load nvidia driver for Xorg and Wayland
-      videoDrivers = ["nvidia-dkms"];
+      videoDrivers = ["nouveau"];
     };
   };
 }
