@@ -1,6 +1,6 @@
 # PROGRAMS
 
-#set $browser microsoft-edge-beta
+set $browser firefox
 set $menu exec ~/.config/rofi/launch.nu drun
 
 # INPUTS
@@ -52,10 +52,10 @@ set $right l
 
 ## Applications
 
-# bindsym $mod+b exec $browser
+bindsym $mod+b exec $browser
 # bindsym $mod+e exec $explorer
 bindsym $mod+space exec $menu
-bindsym $mod+t exec foot # exec $terminal
+bindsym $mod+t exec $terminal
 
 ## Sway
 
