@@ -27,7 +27,7 @@
         wget                # Downloader
 
         # Video/Audio
-        #feh		            # Image Viewer
+        feh		            # Image Viewer
         #mpv		            # Media Player
         #obs-studio		      # Broadcasting
         #pavucontrol	      # Audio control
