@@ -7,8 +7,8 @@
 (defwidget recorder []
     (eventbox
         :onclick { get_env("XDG_CURRENT_DESKTOP") == "Hyprland"
-            ? "hyprctl dispatch exec $(realpath ./widgets/recording.nu) toggle"
-            : "swaymsg exec $(realpath ./widgets/recording.nu) toggle" }
+            ? "hyprctl dispatch nu $(realpath ./widgets/recording.nu) toggle"
+            : "swaymsg nu $(realpath ./widgets/recording.nu) toggle" }
         (label
             :class "nerd-icon ${recording_status.running ? 'active' : ''}"
             :text "${recording_status.icon}"
