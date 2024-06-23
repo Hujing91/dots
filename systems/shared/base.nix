@@ -59,7 +59,7 @@
     };
     useDHCP = lib.mkDefault true;
     networkmanager.enable = true;
-    wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+    #wireless.enable = true;  # Enables wireless support via wpa_supplicant. # conflict with networkmanager
   };
 
   nix = {
