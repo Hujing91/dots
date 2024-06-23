@@ -54,6 +54,7 @@
 
     modules = {
       gtk.enable = true;
+      tor.enable = true;
       tuigreet = {
         enable = true;
         command = "sway";
