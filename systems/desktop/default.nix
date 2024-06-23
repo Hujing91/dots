@@ -63,8 +63,6 @@
       #xdg.enable = true;
     };
 
-    blueman.enable = true;
-
     pipewire = {
       enable = true;
       alsa = {
