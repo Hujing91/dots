@@ -3,8 +3,8 @@
 - In terminal:
   - $ sudo su
   - nix-env .iA nixos.git
-  - git clone $repourl /mnt/ $path
-  - nixos-install --flake .# $host
+  - git clone {{ repourl }} /mnt/{{ path }}
+  - nixos-install --flake .#$host
   - reboot
   - /* login */
   - $ sudo rm -r /etc/nixos/configuration.nix
