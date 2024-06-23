@@ -7,24 +7,40 @@ in
 {
   options.users.hujing = {
     enable = mkEnableOption "hujing user";
-  };
 
-  config = mkIf cnfg.enable
-  {
-    users = {
-      users.hujing = {
-          extraGroups = [
-              "audio"
-              "disk"
-              "networkmanager"
-              "video"
-              "wheel"
-          ];
-          home = "/home/hujing";
-          isNormalUser = true;
-          description = "hujing";
-          shell = pkgs.nushell;
-      };
+    dockerGroupMember = mkOption {
+      type = types.bool;
+      default = false;
+      description = ''
+        If enabled, the user gets added to the docker group.
+      '';
     };
   };
+
+  config =
+    let
+      extraGroups = [
+        "audio"
+        "disk"
+        "networkmanager"
+        "video"
+        "wheel"
+      ];
+    in
+    mkIf cnfg.enable
+      {
+        users = {
+          users.hujing = {
+              extraGroups =
+                if cnfg.dockerGroupMember
+                then extraGroups ++ [ "docker" ]
+                else extraGroups;
+              group = "users";
+              home = "/home/hujing";
+              isNormalUser = true;
+              description = "hujing";
+              shell = pkgs.nushell;
+          };
+        };
+      };
 }

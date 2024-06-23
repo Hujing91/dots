@@ -50,9 +50,13 @@
     };
   };
 
-  console.keyMap = "de";
-
   networking = {
+    firewall = {
+      enable = true;
+      allowedTCPPorts = [ 80 443 ]; # 2022 openssh
+      #allowedUDPPorts = [ 53 ];
+      allowPing = false;
+    };
     useDHCP = lib.mkDefault true;
     networkmanager.enable = true;
   };
@@ -133,4 +137,12 @@
   };
 
   time.timeZone = "Europe/Berlin";
+
+  virtualisation = {
+    docker = {
+      enable = true;
+      autoPrune.enable = true;
+      enableOnBoot = true;
+    };
+  };
 }
