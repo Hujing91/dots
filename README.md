@@ -1,13 +1,12 @@
 # Flake on fresh NixOS install
 - Boot into ISO
 - In terminal:
-  - $ sudo su
-  - nix-env .iA nixos.git
-  - git clone {{ repourl }} /mnt/{{ path }}
-  - nixos-install --flake .#$host
+  - $ `sudo su`
+  - `git clone <repourl> /mnt/<path>`
+  - `nixos-install --flake .#<host>`
   - reboot
   - /* login */
-  - $ sudo rm -r /etc/nixos/configuration.nix
+  - $ `sudo rm -r /etc/nixos/configuration.nix`
   - /* move build to desired location */
 
 
