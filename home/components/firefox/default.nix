@@ -133,6 +133,11 @@ in
                 install_url = "https://addons.mozilla.org/firefox/downloads/latest/quick-search-for-wikipedia/latest.xpi";
                 installation_mode = "blocked";
               };
+              # DuckDuckGo:
+              "ddg@search.mozilla.org" = {
+                install_url = "https://addons.mozilla.org/firefox/downloads/latest/duckduckgo-for-firefox/latest.xpi";
+                installation_mode = "blocked";
+              };
             };
 
             /* ---- PREFERENCES ---- */
