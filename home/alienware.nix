@@ -1,0 +1,48 @@
+{ pkgs, home-manager, ... }:
+{
+  imports = [
+    ./base.nix
+  ];
+
+  home = {
+    components = {
+      alacritty.enable = true;
+      firefox.enable = true;
+
+      # NOTE: fallback terminal
+      foot.enable = true;
+
+      logseq.enable = true;
+      swww.enable = true;
+    };
+
+    modules = {
+      cybersecurity.enable = true;
+      gtk.enable = true;
+      sway.enable = true;
+      #hyprland.enable = true;
+      xdg.enable = true;
+    };
+
+    packages = with pkgs; [
+      discord
+      obsidian
+      curl
+      cyberchef
+      nano
+      parted
+      btop              # Ressource Manager
+      lshw
+
+      (lutris.override {
+        extraLibraries =  pkgs: [
+          # List library dependencies here
+        ];
+        extraPkgs = pkgs: [
+          winePackages.staging
+          wine64Packages.staging
+        ];
+      })
+    ];
+  };
+}

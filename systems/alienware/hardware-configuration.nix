@@ -8,10 +8,14 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-  boot.initrd.availableKernelModules = [ "xhci_pci" "nvme" "usbhid" "usb_storage" "sd_mod" ];
-  boot.initrd.kernelModules = [ ];
-  boot.kernelModules = [ "kvm-intel" ];
-  boot.extraModulePackages = [ ];
+  boot = {
+    kernelPackages = pkgs.linuxPackages_latest;
+
+    initrd.availableKernelModules = [ "xhci_pci" "nvme" "usbhid" "usb_storage" "sd_mod" ];
+    initrd.kernelModules = [ ];
+    kernelModules = [ "kvm-intel" ];
+    extraModulePackages = [ ];
+  };
 
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/0ce2a875-f175-438a-ba3e-b31f8616ff0b";
@@ -19,6 +23,7 @@
     };
 
   boot.initrd.luks.devices."luks-895cdf01-0d68-4495-badb-50ddd7e347d6".device = "/dev/disk/by-uuid/895cdf01-0d68-4495-badb-50ddd7e347d6";
+  boot.initrd.luks.devices."luks-80218ca6-3371-4bd3-9010-c9b45ddb6c74".device = "/dev/disk/by-uuid/80218ca6-3371-4bd3-9010-c9b45ddb6c74";
 
   fileSystems."/boot" =
     { device = "/dev/disk/by-uuid/6635-3AD2";
@@ -30,14 +35,14 @@
     [ { device = "/dev/disk/by-uuid/cafa49a9-c9d2-472e-b858-3bc2cf886ab9"; }
     ];
 
-  # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
-  # (the default) this is the recommended approach. When using systemd-networkd it's
-  # still possible to use this option, but it's recommended to use it in conjunction
-  # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
-  networking.useDHCP = lib.mkDefault true;
-  # networking.interfaces.enp61s0.useDHCP = lib.mkDefault true;
-  # networking.interfaces.wlp62s0.useDHCP = lib.mkDefault true;
+  hardware = {
+    pulseaudio.enable = false;
+    
+    cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 
-  nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
-  hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+    bluetooth = {
+      enable = true;
+      powerOnBoot = true;
+    };
+  };
 }

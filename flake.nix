@@ -48,6 +48,35 @@
             }
           ];
         };
+
+        alienware = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [
+            {
+              nixpkgs.overlays = [
+                #neocode.overlays.default
+                yeet.overlays.default
+              ];
+            }
+
+            ./systems/alienware
+            {
+              imports = [ ./users ];
+
+              users.${user} = {
+                enable = true;
+              };
+            }
+            
+            home.nixosModules.home-manager {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.extraSpecialArgs = { inherit user; };
+              home-manager.users."${user}" = import ./home/desktop.nix;
+              home-manager.backupFileExtension = "backup";
+            }
+          ];
+        };
       };
     };
 }
