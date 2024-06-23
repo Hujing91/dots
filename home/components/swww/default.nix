@@ -37,13 +37,13 @@ in
     home.modules.sway.prependedConfig = mkIf cnfg.enableSwayIntegration ''
       # Start swww daemon and cycle through random wallpaper
       exec swww-daemon
-      exec bash ~/.config/swww/wallpaper.sh ~/hujing/Wallpapers/
+      exec bash ~/.config/swww/wallpaper.sh ~/Wallpapers/
     '';
 
     home.modules.hyprland.additionalConfig = mkIf cnfg.enableHyprlandIntegration ''
       # Start swww daemon and cycle through random wallpaper
       exec-once = swww-daemon
-      exec-once = bash ~/.config/swww/wallpaper.sh ~/hujing/Wallpapers/
+      exec-once = bash ~/.config/swww/wallpaper.sh ~/Wallpapers/
     '';
   };
 }

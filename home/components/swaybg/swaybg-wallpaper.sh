@@ -3,7 +3,7 @@
 while true; do
     PID=`pidof swaybg`
 
-    swaybg --mode fill --image "$(find $HOME/hujing/Wallpapers -type f | shuf -n 1)" &
+    swaybg --mode fill --image "$(find $HOME/Wallpapers -type f | shuf -n 1)" &
 
     sleep 5
     kill $PID > /dev/null
