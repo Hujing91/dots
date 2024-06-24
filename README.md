@@ -17,7 +17,6 @@ In case of errors of dubious ownerships, have a dirty worktree and the command w
 
 # Known issues
 ## General
-- [ ] Sway config workspace and power shortcuts do not work
 - [ ] Keyring not working with wayland
 - [ ] Missing icons in different consoles and applications like codium
 - [ ] Local VM Software (e.g. VM Workstation) not starting
