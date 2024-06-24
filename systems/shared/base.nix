@@ -103,8 +103,8 @@
   security = {
     rtkit.enable = true;
 
-    sudo.enable = true;
     doas.enable = true;
+    sudo.enable = false;
   };
 
   services = {

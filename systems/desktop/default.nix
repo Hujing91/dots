@@ -6,7 +6,6 @@
 {
   imports = [ 
     ../shared/base.nix
-    ../shared/pentestBase.nix
     ./hardware-configuration.nix
   ];
 

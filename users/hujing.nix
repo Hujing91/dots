@@ -40,7 +40,16 @@ in
               isNormalUser = true;
               description = "hujing";
               shell = pkgs.nushell;
+              uid = 1000;
           };
+        };
+
+        security.doas = {
+          extraRules = [{
+            users = [ "hujing" ];
+            keepEnv = true;
+            persist = true;
+          }];
         };
       };
 }
