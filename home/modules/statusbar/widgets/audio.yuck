@@ -10,8 +10,8 @@
             ? "hyprctl dispatch exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
             : "swaymsg exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle" }
         :onmiddleclick { get_env("XDG_CURRENT_DESKTOP") == "Hyprland"
-            ? "hyprctl dispatch nu $(realpath ./widgets/set_next_audio_output.nu)"
-            : "swaymsg nu $(realpath ./widgets/set_next_audio_output.nu)" }
+            ? "hyprctl dispatch exec $(realpath ./widgets/set_next_audio_output.nu)"
+            : "swaymsg exec $(realpath ./widgets/set_next_audio_output.nu)" }
         :onrightclick { get_env("XDG_CURRENT_DESKTOP") == "Hyprland"
             ? "hyprctl dispatch exec pavucontrol"
             : "swaymsg exec pavucontrol" }

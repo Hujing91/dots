@@ -59,18 +59,18 @@ bindsym $mod+t exec $terminal
 
 ## Sway
 
-bindsym $mod+q nu ~/.config/rofi/launch.nu power
+bindsym $mod+q exec ~/.config/rofi/launch.nu power
 bindsym $mod+Shift+c kill
 bindsym $mod+Shift+r reload
 
 for_window [title="fzf-switcher"] floating enable
 
-bindsym $mod+r nu ~/.config/rofi/launch.nu rename
-bindsym $mod+w nu ~/.config/rofi/launch.nu workspace
-bindsym $mod+Shift+w nu ~/.config/rofi/launch.nu move
+bindsym $mod+r exec ~/.config/rofi/launch.nu rename
+bindsym $mod+w exec ~/.config/rofi/launch.nu workspace
+bindsym $mod+Shift+w exec ~/.config/rofi/launch.nu move
 
-bindsym $mod+n nu ~/.config/sway/scripts/focus_workspace.nu next
-bindsym $mod+p nu ~/.config/sway/scripts/focus_workspace.nu prev
+bindsym $mod+n exec ~/.config/sway/scripts/focus_workspace.nu next
+bindsym $mod+p exec ~/.config/sway/scripts/focus_workspace.nu prev
 
 bindsym $mod+s scratchpad show
 bindsym $mod+Shift+s move scratchpad
