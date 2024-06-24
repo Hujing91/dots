@@ -15,6 +15,7 @@ Example: `sudo nixos-rebuild switch --flake .#desktop`
 
 # Known issues
 ## General
+- [ ] Sway config workspace and poower shortcuts do not work
 - [ ] Keyring not working with wayland
 - [ ] Missing icons in different consoles and applications like codium
 - [ ] Local VM Software (e.g. VM Workstation) not starting
