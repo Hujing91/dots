@@ -13,7 +13,7 @@
 `doas nixos-rebuild switch --flake .#<host>` \
 Example: `doas nixos-rebuild switch --flake .#desktop`
 
-In case of errors of dubious ownerships, build from github or have a dirty worktree.
+In case of errors of dubious ownerships, have a dirty worktree and the command works.
 
 # Known issues
 ## General
