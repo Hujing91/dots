@@ -21,9 +21,6 @@ In case of errors of dubious ownerships, have a dirty worktree and the command w
 - [ ] Missing icons in different consoles and applications like codium
 - [ ] Local VM Software (e.g. VM Workstation) not starting
 
-## Hyprland
-- [ ] nu not known in terminal, so config shortcuts not working
-
 ## Desktop Host
 - [ ] NVIDIA Crashes lead to environment restart
 - [ ] Mount second hard drive encrypted
