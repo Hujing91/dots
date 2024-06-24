@@ -9,23 +9,28 @@ in
 
   config =
     mkIf cnfg.enable {
-      home.packages = with pkgs; [
-        xdg-utils
-      ];
-
-      xdg = {
+      home = {
+        packages = with pkgs; [
+          xdg-utils
+        ];
+      };
+      
+      xdg = { 
         enable = true;
-        userDirs = {
-        #  enable = true; # Enabling userDirs crashes home-manager???
-          desktop = "$HOME/desktop";
-          documents = "$HOME/documents";
-          download = "$HOME/downloads";
-          music = "$HOME/music";
-          pictures = "$HOME/pictures";
-          publicShare = "$HOME/public";
-          templates = "$HOME/documents/templates";
-          videos = "$HOME/videos";
-        };
+        userDirs = 
+          let appendToHomeDir = path: "${config.home.homeDirectory}/${path}"; 
+          in 
+          { 
+            enable = true; 
+            desktop = appendToHomeDir "desktop";
+            documents = appendToHomeDir "documents";
+            download = appendToHomeDir "downloads";
+            music = appendToHomeDir "music";
+            pictures = appendToHomeDir "pictures";
+            publicShare = appendToHomeDir "public";
+            templates = appendToHomeDir "templates";
+            videos = appendToHomeDir "videos";
+          };
       };
     };
 }
