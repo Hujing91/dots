@@ -19,11 +19,11 @@ In case of errors of dubious ownerships, have a dirty worktree and the command w
 ## General
 - [ ] Keyring not working with wayland
 - [ ] Missing icons in different consoles and applications like codium
-- [ ] Local VM Software (e.g. VM Workstation) not starting
 
 ## Desktop Host
 - [ ] NVIDIA Crashes lead to environment restart
 - [ ] Mount second hard drive encrypted
 
 # Missing Features
+- [ ] Support VM Software
 - [ ] Replace hard drive uuid with labels
