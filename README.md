@@ -15,6 +15,14 @@ Example: `doas nixos-rebuild switch --flake .#desktop`
 
 In case of errors of dubious ownerships, have a dirty worktree and the command works.
 
+# Virt-Manager Configuration
+File (in the menu bar) -> Add connection
+
+HyperVisor = QEMU/KVM
+Autoconnect = checkmark
+
+Connect
+
 # Known issues
 ## General
 - [ ] Keyring not working with wayland
