@@ -33,5 +33,5 @@ Connect
 - [ ] Mount second hard drive encrypted
 
 # Missing Features
-- [ ] Support VM Software
+- [ ] Support VM Software (In Progress: Added Feature, Testing Remaining)
 - [ ] Replace hard drive uuid with labels
