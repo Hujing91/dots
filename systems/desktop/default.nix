@@ -44,6 +44,8 @@
   programs = {
     seahorse.enable = true;
     steam.enable = true;
+    nvidiaPatches = true;
+    xwayland.enable = true;
   };
 
   services = {
