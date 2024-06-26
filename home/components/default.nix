@@ -27,7 +27,6 @@
     ./tls
     ./tmux
     ./traffic
-    ./virt-manager
     ./web
     ./zellij
   ];

@@ -14,7 +14,6 @@
 
       logseq.enable = true;
       swww.enable = true;
-      virtmanager.enable = true;
     };
 
     modules = {

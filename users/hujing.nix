@@ -25,6 +25,7 @@ in
         "networkmanager"
         "video"
         "wheel"
+        "libvirtd"
       ];
     in
     mkIf cnfg.enable

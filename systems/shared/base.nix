@@ -97,6 +97,7 @@
 
   programs = {
     dconf.enable = true;
+    virt-manager.enable = true;
   };
 
   security = {
@@ -139,6 +140,9 @@
   time.timeZone = "Europe/Berlin";
 
   virtualisation = {
+    libvirtd = {
+      enable = true;
+    };
     docker = {
       enable = true;
       autoPrune.enable = true;
