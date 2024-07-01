@@ -27,6 +27,7 @@ Connect
 ## General
 - [ ] Keyring not working with wayland
 - [ ] Missing icons in different consoles and applications like codium
+- [ ] XDG crashes home-manager 24.05
 
 ## Desktop Host
 - [ ] NVIDIA Crashes lead to environment restart
