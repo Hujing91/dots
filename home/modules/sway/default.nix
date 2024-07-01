@@ -104,6 +104,10 @@ in
           XDG_CURRENT_DESKTOP = "sway";
           XDG_SESSION_DESKTOP = "sway";
           XDG_SESSION_TYPE = "wayland";
+          # If your cursor becomes invisible
+          WLR_NO_HARDWARE_CURSORS = "1";
+          # Hint electron apps to use wayland
+          NIXOS_OZONE_WL = "1";
         };
       };
     };
