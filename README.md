@@ -31,8 +31,8 @@ Connect
 
 ## Desktop Host
 - [ ] NVIDIA Crashes lead to environment restart
-- [ ] Mount second hard drive encrypted
 
 # Missing Features
 - [ ] Support VM Software (In Progress: Added Feature, Testing Remaining)
 - [ ] Replace hard drive uuid with labels
+- [ ] Use disko for automated partition setup on installation
