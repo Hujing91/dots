@@ -19,6 +19,8 @@
     packages = with pkgs; [
         #python3 # collision with libpython3.11
         rdesktop
+        
+        gparted
 
         # Terminal
         #pfetch		          # Minimal fetch

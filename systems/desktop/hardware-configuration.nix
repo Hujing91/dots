@@ -18,6 +18,11 @@
       fsType = "ext4";
     };
 
+  fileSystems."/storage" =
+    { device = "/dev/disk/by-uuid/9b713930-5893-4489-ad02-e9a01d8e6025"; # "/dev/disk/by-label/nixos";
+      fsType = "ext4";
+    };
+
   boot.initrd.luks.devices."luks-c7021aef-6bfb-4adb-8a23-2281a3fe0cdf".device = "/dev/disk/by-uuid/c7021aef-6bfb-4adb-8a23-2281a3fe0cdf";
   boot.initrd.luks.devices."luks-5b91795c-ce0f-471c-bf41-d9fe09041709".device = "/dev/disk/by-uuid/5b91795c-ce0f-471c-bf41-d9fe09041709";
 
