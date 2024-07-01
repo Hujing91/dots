@@ -21,7 +21,7 @@
       gtk.enable = true;
       sway.enable = true;
       #hyprland.enable = true;
-      xdg.enable = true;
+      #xdg.enable = true; # xdg crashes home-manager stable version 24.05 Why?
     };
 
     packages = with pkgs; [
