@@ -27,11 +27,11 @@ Connect
 ## General
 - [ ] Keyring not working with wayland
 - [ ] Missing icons in different consoles and applications like codium
-- [ ] XDG crashes home-manager 24.05
 
-## Desktop Host
+## Desktop Host (on hold for now; no solution found for nvidia and home-manager)
 - [ ] NVIDIA Crashes lead to environment restart
 - [ ] Add 2nd harddrive luks2 encrypted
+- [ ] XDG crashes home-manager
 
 # Missing Features
 - [ ] Support VM Software (In Progress: Added Feature, Testing Remaining)
