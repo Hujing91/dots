@@ -41,16 +41,9 @@
       powerOnBoot = true;
     };
 
-    opengl = {
-      enable = true;
-      driSupport = true;
-      driSupport32Bit = true;
+    graphics = {
+      enable = lib.mkDefault true;
     };
-
-    # replace opengl with graphics again when home-manager unstable is fixed
-    #graphics = {
-    #  enable = lib.mkDefault true;
-    #};
 
     # On issues check: https://nixos.wiki/wiki/Nvidia#CUDA
     nvidia = {
@@ -83,7 +76,15 @@
       nvidiaSettings = true;
 
       # Optionally, you may need to select the appropriate driver version for your specific GPU.
-      package = config.boot.kernelPackages.nvidiaPackages.stable;
+      package = config.boot.kernelPackages.nvidiaPackages.mkDriver {
+        version = "555.58";
+
+        sha256_64bit = "sha256-bXvcXkg2kQZuCNKRZM5QoTaTjF4l2TtrsKUvyicj5ew=";
+        sha256_aarch64 = lib.fakeSha256;
+        openSha256 = lib.fakeSha256;
+        settingsSha256 = "sha256-vWnrXlBCb3K5uVkDFmJDVq51wrCoqgPF03lSjZOuU8M=";
+        persistencedSha256 = lib.fakeSha256;
+      };
     };
   };
 }
