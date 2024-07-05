@@ -31,8 +31,9 @@ Connect
 
 ## Desktop Host
 - [ ] NVIDIA Crashes lead to environment restart
+- [ ] Add 2nd harddrive luks2 encrypted
 
 # Missing Features
 - [ ] Support VM Software (In Progress: Added Feature, Testing Remaining)
 - [ ] Replace hard drive uuid with labels
-- [ ] Use disko for automated partition setup on installation
+- [ ] Use disko for automated partition setup on installation 
